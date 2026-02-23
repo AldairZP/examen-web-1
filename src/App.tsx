@@ -12,7 +12,7 @@ export const App = () => {
     fechaSalida: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
     console.log(e.target.name, e.target.value);
@@ -124,3 +124,4 @@ export const App = () => {
     </div>
   );
 };
+
