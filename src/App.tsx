@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
 import { CustomInput } from "./components/CustomInput";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 
 export const App = () => {
   const [inputs, setInputs] = useState<Record<string, string>>({
@@ -18,7 +18,7 @@ export const App = () => {
     console.log(e.target.name, e.target.value);
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     // validar que no haya campos vacíos
     e.preventDefault();
     const hasEmptyFields = Object.values(inputs).some((value) => value === "");
@@ -124,4 +124,3 @@ export const App = () => {
     </div>
   );
 };
-
