@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
 import { CustomInput } from "./components/CustomInput";
-import { type FormEvent, useState } from "react";
+import { type ChangeEvent, type FormEvent, useState } from "react";
 
 export const App = () => {
   const [inputs, setInputs] = useState<Record<string, string>>({
@@ -12,7 +12,9 @@ export const App = () => {
     fechaSalida: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
     console.log(e.target.name, e.target.value);
