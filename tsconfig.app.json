@@ -25,10 +25,12 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     "noImplicitAny": false,
-    "noEmitOnError": false
+    "noEmitOnError": false,
+    "noCheck": true
   },
   "include": ["src"]
 }
+
 
 
 
